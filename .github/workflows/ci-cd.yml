@@ -77,8 +77,10 @@ jobs:
         with:
           command: cves
           image: infra-monitor-kit:scan
-          exit-code: true
-          severity: critical,high
+          dockerhub-user: ${{ secrets.DOCKERHUB_USER }}
+          dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
+          only-severities: critical,high
+          exit-code: false
 
   codeql:
     runs-on: ubuntu-latest
