@@ -68,8 +68,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=TU_SONAR_PROJECT_KEY
-            -Dsonar.organization=TU_SONAR_ORGANIZATION
+            -Dsonar.projectKey=ea12c323daa9131828d844d6edd4869ba7f49345
+            -Dsonar.organization=jescastroa
             -Dsonar.sources=src
 
       - name: Run Docker Scout CVE check
