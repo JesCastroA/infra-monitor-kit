@@ -9,10 +9,10 @@
  * de entorno o desde un gestor de secretos.
  */
 export const MONITOR_CONFIG = {
-  endpoint: 'https://monitor.cloudpulse.example',
-  username: 'monitor-admin',
-  password: 'Cloud2024Pulse!',
-  apiKey: 'cp_live_a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6',
+  endpoint: process.env.MONITOR_ENDPOINT || 'https://monitor.cloudpulse.example',
+  username: process.env.MONITOR_USERNAME || 'monitor-admin',
+  password: process.env.MONITOR_PASSWORD || '',
+  apiKey: process.env.MONITOR_API_KEY || '',
 };
 
 export function getDatabaseUrl(): string {
